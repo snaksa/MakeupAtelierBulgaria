@@ -1,0 +1,1626 @@
+/*blue = '#3394B5';
+red = '#E40032';*/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Aria;
+    font-size: 17px;
+}
+
+.rightSidebar{
+    width: 40px;
+    height: auto;
+    background-color: #000;
+    position: fixed;
+    right: 0;
+    top: 200px;
+    z-index: 2;
+    text-align: center;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.socialIconsSidebar{
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    padding: 5px;
+    border-bottom: 1px solid #fff;
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* Firefox 35+ */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+.socialIconsSidebar:hover{
+    filter: none;
+    -webkit-filter: grayscale(0);
+    opacity: 1;
+}
+
+#header{
+    width: 100%;
+    min-width: 990px;
+    max-width: 1400px;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.content{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#top{
+    width: 100%;
+    min-width: 990px;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+    border: 2px solid red;
+    overflow: hidden;
+}
+
+.logoImage{
+    width: 180px;
+    float:left;
+    border: 1px solid #3394B5;
+    border-radius: 10px;
+    margin-top: 3px;
+    margin-left: 4px;
+}
+
+#menu-wrapper {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px;
+    border-radius: 0px 0px 0px 5px;
+    height:70px; /*55px*/
+    width: 980px;
+    z-index: 2;
+}
+#menu-wrapper:after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1;
+}
+
+.menuBackground{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-10;
+    opacity: 0.8;
+}
+
+#menu {
+    width: 640px;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: normal;
+    text-align: center;
+}
+
+#menu li {
+    display: inline-block;
+    /*border-left: 1px solid #3394B5;*/
+    text-align: center;
+    float:left;
+}
+
+#menu li:first-child
+{
+    border-left: none;
+}
+
+.menuLink {
+    display: block;
+    letter-spacing: 1px;
+    margin: 0px 9px;
+    padding: 10px 0px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: "Georgia";
+    color: #FFFFFF;
+    border: none;
+}
+
+.menuLink:hover {
+    text-decoration: none;
+    color: #3394B5;
+}
+
+.categories li {
+    display: inline-block;
+    /*border-left: 1px solid #3394B5;*/
+    text-align: center;
+    float:left;
+}
+
+#menu .current_page_item a {
+
+}
+
+#menu ul ul {
+    display: none;
+    position: absolute;
+    background-color:rgba(0,0,0,0.9);
+    border-top: 0;
+    margin-left: 0;
+    z-index: 1;
+}
+
+#menu ul ul li {
+    display: block;
+}
+
+.listContentFace{
+    padding: 10px;
+    width: 550px;
+}
+
+.listContentSingle{
+    padding: 10px;
+}
+
+.innerMenuDiv{
+    height:13px;
+    background-color:#3394B5;
+    opacity:1;
+    padding:0;
+}
+
+#slideshow { 
+    width: 100%;
+    min-width: 990px;
+    position: absolute;
+    top: 0;
+    border-bottom: 25px solid transparent;
+    -webkit-border-image: url(../images/slideshowBottom.png) 300 300 repeat; /* Safari 3.1-5 */
+    -o-border-image: url(../images/slideshowBottom.png) 300 300 repeat; /* Opera 11-12.1 */
+    border-image: url(../images/slideshowBottom.png) 300 300 repeat;
+}
+
+.slideshowImage{
+    width: 100%;
+}
+
+.mainSlideshowImage{
+    width: 100%;
+
+}
+
+.basketMenu{
+    position: relative;
+    background-color: #3394B5;
+    width: 130px;
+    height:55px;
+    float:right;
+    margin-top:-4px;
+    margin-right: -4px;
+    cursor: pointer;
+    z-index: 2;
+    font-family: "Georgia";
+}
+
+.basketMenu:hover{
+    background-color: #FFCC00;
+}
+
+.basketMenu:hover .basketLink{
+    color: #000;
+}
+
+.basketLink {
+    display: block;
+    letter-spacing: 1px;
+    margin: 0px 9px;
+    padding: 10px 0px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: "Georgia";
+    color: #FFFFFF;
+    border: none;
+}
+
+.basketDiv {
+    display: none;
+    position: absolute;
+    /*cursor: wait;
+    background-color: #FFCC00;*/
+    right: 0px;
+    z-index: 2;
+    width:350px;
+    height:auto;
+    background-color: #fff;
+    cursor: default;
+    border: 1px solid #FFCC00;
+    border-top: none;
+    border-radius: 10px 0px 0px 0px;
+}
+
+.basketHeader{
+    width: 99%;
+    height: 25px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.basketHeaderSpan{
+    display: inline-block;
+    color: #3394B5;
+    font-size: 14px;
+    text-align: center;
+}
+
+.basketProductDiv{
+    border-bottom: 1px solid #ccc;
+    width: 99%;
+    height: 70px;
+}
+
+.basketProductImage{
+    max-width: 99%;
+    max-height: 99%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.basketProductImageDiv{
+    float:left;
+    width: 70px;
+    height: 60px;
+    position: relative;
+    margin:5px;
+}
+
+.basketProductNameDiv{
+    position: relative;
+    float:left;
+    width: 110px;
+    height: 60px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.basketProductName{
+    color: #3394B5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.basketProductQuanityDiv{
+    position: relative;
+    float:left;
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.basketProductQuanity{
+    color: #3394B5;
+    font-size: 14px;
+    line-height: 60px;
+}
+
+.basketProductPriceDiv{
+    position: relative;
+    float:left;
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+    margin-left: 15px;
+    text-align: center;
+}
+
+.basketToBasket{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #FFCC00;
+    padding-top: 10px;
+}
+
+.toBasketLink{
+    color: #000;
+    text-decoration: none;
+}
+
+.messageDiv{
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background-color:rgba(0,0,0,0.9);
+    padding: 7px;
+    border-radius: 5px 5px 0px 0px;
+    height:70px; /*55px*/
+    width: 970px;
+    z-index: 1;
+    color: #fff;
+    font-family: "Georgia";
+    font-size: 18px;
+}
+
+
+.subMenu{
+    width: 150px;
+    color: #B9B9B9;
+    font-size: 16;
+    text-align: left;
+    float: left;
+    margin-left: 25px;
+    margin-bottom: 40px;
+}
+
+.subMenu:hover{
+    margin-left: 23px;
+    border-left: 2px solid #3394B5;
+}
+
+.subMenuLink{
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px dotted #B9B9B9;
+    opacity: 0.8;
+    text-transform: uppercase;
+    padding: 5px;
+    font-size: 12px;
+    font-family: "Georgia";
+}
+
+.subMenuLink:first-child{
+    text-transform: uppercase;
+    font-size: 14px;
+    border-bottom: 1px solid #3394B5;
+    font-weight: bold;
+}
+
+.subMenuLink:last-child{
+    border-bottom: none;
+}
+
+.subMenuLink a{
+    color: #B9B9B9;
+    text-decoration: none;
+}
+
+.subMenuLink a:hover{
+    color: #3394B5;
+}
+
+.subMenu2{
+    width: 150px;
+    color: #B9B9B9;
+    font-size: 16;
+    text-align: left;
+    margin-left: 25px;
+    font-family: "Georgia";
+}
+
+.subMenuLink2:hover{
+    margin-left: -2px;
+    border-left: 2px solid #3394B5;
+}
+
+.subMenuLink2{
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #3394B5;
+    opacity: 0.8;
+    text-transform: uppercase;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.subMenuLink2 a{
+    color: #B9B9B9;
+    text-decoration: none;
+}
+
+.subMenuLink2 a:hover{
+    color: #3394B5;
+}
+
+.faceModel{
+    width: 335px;
+    border: 1px solid #3394B5;
+}
+
+.faceImage{
+    float:right;
+    margin-top: -150px;
+    margin-right: 13px;
+    margin-bottom: 20px;
+}
+
+.academySectionImage{
+    width: 150px;
+}
+
+.academyImage{
+    float: left;
+    border: 1px solid #3394B5;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+#socialForm{
+    background-color:rgba(0,0,0,0.8);
+    width: 300px;
+    float:	right;
+    border-radius: 0px 0px 5px 5px;
+    position: absolute;
+    right: 0;
+    top: 63px;
+}
+
+.products{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.homeProduct{
+    width: 300px;
+    height: 260px;
+    border: none;
+    float: left;
+    z-index: 1;
+}
+
+.homeProductLink{
+    text-decoration: none;
+    color: #000;
+}
+
+.homeProductLink:hover{
+
+}
+
+.homeProduct:hover{
+    /*background-color:rgba(51,148,181,0.1);*/
+}
+
+.homeProduct:hover img{
+    /*border-radius: 10px;*/
+}
+
+.singleProductImage{
+    max-width: 200px;
+    max-height: 200px;
+    position: absolute;
+    margin: auto;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.productTitle{
+    margin: -10px auto;
+    width: 270px;
+    text-align:center;
+    font-family: "Georgia";
+    float: left;
+}
+
+.homeInfo{
+    width: 980px;
+    /*border-top: 1px solid #3394B5;*/
+    margin: 20px auto;
+    margin-bottom: 40px;
+    padding-left: 15px;
+}
+
+.homeInfoInnerDiv{
+    width: 45%;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 20px;
+    height: 90%;
+    float: left;
+    border-right: 1px dotted #ccc;
+    font-family: "Georgia";
+}
+
+.homeInfoInnerDiv p{
+    padding: 6px;
+    color: #595959;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.homeInfoImage{
+    width: 97%;
+    margin: 15px 5px;
+    border-radius: 15px;
+    border: 2px solid #3394B5;
+}
+
+.homeInfoInnerSpan{
+    font-weight:bold;
+    text-decoration:underline;
+    letter-spacing: 3px;
+}
+
+.footer{
+    width: 100%;
+    min-width: 980px;
+    height: 89px;
+    background-color:rgba(0,0,0,0.8);
+    margin: 0 auto;
+    padding-top: 0px;
+}
+
+.footerDiv{
+    width: 220px;
+    float: left;
+    color: #fff;
+    padding: 10px;
+    font-family: "Georgia";
+    text-align: center;
+    margin-right: 84px;
+}
+
+
+.categories{
+    margin-left: 0;
+    margin-right: 0;
+    height: 40px;
+    padding: 5px;
+    margin-top: -50px;
+    background-color:rgba(0,0,0,0.8);
+    z-index: 1;
+    position: relative;
+}
+
+#productsHeader{
+    width: 100%;
+    min-width: 990px;
+    max-width: 1500px;
+    height: 250px;
+    position: relative;
+    margin: 0 auto;
+    border-bottom: 5px solid #3394B5;
+}
+
+.productsSection{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.productCategories{
+    width: 100%;
+    height: 360px;
+    border-bottom: 1px solid #ccc;
+}
+
+.productCategoriesInnerDivText{
+    width: 40%;
+    height: 98%;
+    float:left;
+    text-align: center;
+}
+
+.productCategory{
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Georgia";
+    text-decoration: none;
+}
+
+.horizontalLine{
+    width: 150px;
+    height: 4px;
+    background-color: #000;
+    border: none;
+}
+
+.indexTitle{
+    color: #000;
+    font-size: 30px;
+    font-family: "Georgia";
+    text-decoration: none;
+}
+
+.indexHorizontalLine{
+    width: 300px;
+    height: 2px;
+    background-color: #000;
+    border: none;
+}
+
+.subCategories{
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 0.6;
+    font-family: "Georgia";
+}
+
+.subCategories:hover{
+    color: #3394B5;
+}
+
+.mainCategory{
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mainCategory:hover{
+    color: #3394B5;
+}
+
+.productCategoriesInnerDivImage{
+    width: 58%;
+    height: 98%;
+    float:left;
+}
+
+.productCategoriesInnerDivImageImage{
+    height: 98%;
+    max-width:98%;
+}
+
+.smallProductCategories{
+    width: 33%;
+    height: 320px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-right: 1px solid #ccc;
+    float: left;
+}
+
+.smallProductCategoriesInnerImage{
+    height: 60%;
+    max-width:98%;
+}
+
+.smallSectionProducts{
+    width: 100%;
+    height:370px;
+}
+
+.productTitleCategory{
+    width: 100%;
+    height: 100px;
+}
+
+.productCategoriesList{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.productCategoriesListHeader{
+    width: 100%;
+    height: 30px;
+    background-color:rgba(0,0,0,0.8);
+    margin-top: 10px;
+    text-align: center;	
+    padding-top: 5px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.productCategoriesListHeaderTitle{
+    text-transform: uppercase;
+    font-size: 17px;
+    font-family: "Georgia";
+    color: #fff;
+
+}
+
+.productSubCategory{
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Georgia";
+    text-decoration: none;
+}
+
+.smallHorizontalLine{
+    width: 150px;
+    height: 2px;
+    background-color: #000;
+    border: none;
+}
+
+.productsList{
+    width: 910px;
+    height: 270px;
+    margin: 0 auto;
+}
+
+.seeMoreProduct{
+    position:relative;
+    width:100px;
+    height:30px;
+    margin: 40% auto;
+    /*background-color: #3394B5;*/
+    background-color: #303030;
+    border: 2px solid #3394B5;
+    /*border-radius: 10px;*/
+    visibility: hidden;
+    font-family: "Georgia";
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.pageHeader{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pageHeaderSpan{
+    padding-top: 10px;
+    font-family: "Georgia";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.teachersSection{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.singleTeacher{
+    margin-top: 20px;
+}
+
+.teachersImage{
+    width: 300px;
+    float: right;
+    margin: 20px;
+    border: 2px solid #3394B5;
+}
+
+.teacherHeader{
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Georgia";
+    text-decoration: none;
+}
+
+.teacherInfo{
+    padding: 20px;
+    text-align: justify;
+    font-family: "Georgia";
+}
+
+.newsImage{
+    width: 200px;
+    height: 240px;
+    margin: 10px;
+    border: 2px solid #3394B5;
+    float: left;
+}
+
+.singleNewsSmall{
+    margin-top: 10px;
+    width: 49%;
+    height: 260px;
+    float: left;
+    margin-right: 4px;
+    border-right: 1px dotted #ccc;
+}
+
+.singleNewsSmallTitle{
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Georgia";
+    text-decoration: none;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.newsSmallInfo{
+    width: 250px;
+    float: left;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.newsSmallLittleInfoSpan{
+    color: #707070;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Georgia";
+}
+
+.newsLarge{
+    width: 100%;
+    height: 260px;
+    float: left;
+    margin: 10px auto;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.newsLargeInfo{
+    width: 730px;
+    float: left;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.newsTitle{
+    color: #000;
+    text-decoration: none;
+}
+
+.newsTitle:hover{
+    color: #3394B5;
+    text-decoration: underline;
+}
+
+.seeMoreNews{
+    color: #000;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Georgia";
+}
+
+.seeMoreNews:hover{
+    color: #3394B5;
+    text-decoration: none;
+}
+
+.singleNewsSection{
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+}
+
+.singleNewsDetails{
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    float: left;
+}
+
+.singleNewsDetails p{
+    text-align: justify;
+    font-family: "Georgia";
+}
+
+.singleNewsTitle{
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Georgia";
+    text-decoration: none;
+    margin-top: 30px;
+    text-transform: uppercase;
+    margin: 0px auto;
+}
+
+.singleNewsImage{
+    width: 200px;
+    height: 240px;
+    margin: 0px 10px 10px 3px;
+    border: 2px solid #3394B5;
+    float: left;
+}
+
+.singleNewsHorizontalLine{
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+}
+
+.singleNewsPublicationDetails{
+    color: #8F8F8F;
+    margin-left: 10px;
+    font-family: "Georgia";
+}
+
+.recentNewsDiv{
+    width: 23%;
+    float: left;
+    height: auto;
+    margin: 42px 0px 0px 3px;
+    border-left: 1px solid #ccc;
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.recentNewsTitleDiv{
+    width: 100%;
+    height: 30px;
+    background-color:rgba(0,0,0,0.8);
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.recentNewsTitleSpan{
+    color: #fff;
+    font-family: "Georgia";
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.recentSingleNews{
+    margin-top: 10px;
+    width: 99%;
+    height: auto;
+    float: left;
+    margin-right: 4px;
+    border-bottom: 1px solid #ccc;
+}
+
+.recentSingleNewsImage{
+    width: 150px;
+    height: 190px;
+    margin: 10px 0px 0px 40px;
+    border: 2px solid #3394B5;
+    float: left;
+}
+
+.recentSingleNewsInfoDiv{
+    width: 200px;
+    float: left;
+    margin: 5px 0px 0px 10px;
+    text-align: center;
+}
+
+.recentSingleNewsTitle{
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Georgia";
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.portfolioImageBig{
+    float: left;
+    border: 1px solid #3394B5;
+    width: 530px;
+    height: 300px;
+}
+
+.portfolioImageMedium{
+    float: left;
+    border: 1px solid #3394B5;
+    width: 250px;
+    height: 140px;
+}
+
+.portfolioImage{
+    float: left;
+    margin: 5px 5px 0px 0px;
+    border: 1px solid #3394B5;
+    max-width: 185px;
+    max-height: 185px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.portfolioImage:hover{
+    opacity: 0.7;
+}
+
+.portfolioSingleImage{
+    position: relative;
+    float: left;
+    margin: 0px 5px 0px 0px;
+    width: 192px;
+    height: 192px;
+}
+
+.anchorImage{
+}
+
+.previousButton{
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.nextButton{
+    position: absolute;
+    top: 40%;
+    right: 2%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.productBox{
+    position: relative;
+    width:200px;
+    height:200px;
+    margin:10px 40px;
+    text-align:center;
+    float:left;
+    border-bottom: 1px solid #3394B5;
+}
+
+.singleProductSection{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.productImages{
+    max-width: 500px;
+    max-height: 500px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+.productImage{
+    max-width: 90%;
+    max-height: 95%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mainProductImageDiv{
+    position: relative;
+    width: 450px;
+    height: 400px;
+    border-bottom: 1px solid #ccc;
+}
+
+.secondaryProductImageDiv{
+    position: relative;
+    width: 96px;
+    height: 89px;
+    border-right: 1px solid #ccc;
+    margin: 7px 0px 0px 1px;
+    float: 	left;
+}
+
+.mainProductImage{
+    max-width: 95%;
+    max-height: 95%;
+}
+
+.secondaryProductImage{
+    max-width: 94px;
+    max-height: 85px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.singleProductDetails{
+    width: 400px;
+    height: 500px;
+    min-height: 600px;
+    float: left;
+    margin-left: 20px;
+}
+
+.productName{
+    font-family: "Georgia";
+    font-size: 21px;
+    color: #000;
+}
+
+.productDescription{
+    font-family: "Georgia";
+    font-size: 15px;
+    color: #000;	
+    opacity: 0.6;
+    text-align: justify;
+}
+
+.productModel{
+    font-family: "Georgia";
+    font-size: 15px;
+    color: #000;
+}
+
+.modelName{
+    font-style:italic;
+    color: #000;	
+    opacity: 0.6;
+}
+
+.modelOptions{
+    width: 370px;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 6px;
+}
+
+.modelImage{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    width: 40px;
+    height: 40px;
+}
+
+.modelImage:hover{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.price{
+    font-style: italic;
+    font-weight: bold;
+    color: #000;
+    font-size: 21px;
+}
+
+.orderButton{
+    width: 220px;
+    height: 25px;
+    font-family: "Georgia";
+    font-size: 18px;
+    float: left;
+    text-align: center;
+    margin-left: 17px;
+    background-color:rgba(51,148,181,0.3);
+    padding: 2px;
+}
+
+.orderButton:hover{
+    background-color:rgba(51,148,181,0.7);
+    cursor: pointer;
+}
+
+.addToCard{
+    float: left;
+    margin: 2px 0px 0px 4px;
+}
+
+.kol{
+    float: left;
+    width: 25px;
+}
+
+.contactAndMapDiv{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.contactHeader{
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    background-color: #3394B5;
+    color:white;
+    font-size:30px;
+    font-family: 'Georgia';
+    padding-top:22px;
+    font-weight: 700;
+    text-align: center;
+    float: left;
+}
+
+.mapDiv{
+    width: 53%;
+    height: auto;
+    margin-left: 30px;
+    float: left;
+    border: 1px solid #ccc;
+}
+
+#map{
+    width: 100%;
+    height: 360px;
+}
+
+.socialMediaBoxes{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.facebookBox{
+    margin-left: 20px;
+    width: 400px;
+}
+
+.twitterBox{
+    margin-left: 20px;
+    margin-top: 20px;	
+    width: 400px;
+}
+
+.socialHeader{
+    width: 100%;
+    height:25px;
+    margin: 0 auto;
+    margin-bottom: -3px;
+    background-color: #3394B5;
+    color:white;
+    font-size:17px;
+    font-family: 'Georgia';
+    padding-top: 3px;
+    font-weight: 700;
+    text-align: center;
+    float: left;
+}
+
+.fbAndTwitter{
+    width: 450px;
+    height: auto;
+    float: left;
+}
+
+.instagramBox{
+    width: 53%;
+    height: auto;
+    float: left;
+}
+
+.siteMapDiv{
+    width: auto;
+    height: auto;
+    text-align: left;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.siteMap{
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    opacity: 0.6;
+    font-family: "Georgia";
+}
+
+.siteMap:hover{
+    color: #3394B5;
+}
+
+.catHeader{
+    text-align: center;
+    width: 100%;
+    margin: 5px auto;
+}
+
+.galleryIconHover{
+    position: absolute;
+    opacity: 0.4;
+}
+
+.galleryIconHover:hover{
+    opacity: 1;
+}
+
+.videoIconHover{
+    position: absolute;
+}
+
+.tipBig[title]:hover:after {
+    content: attr(title);
+    padding: 4px 8px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 515px;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+.tipSmallRight[title]:hover:after {
+    content: attr(title);
+    padding: 4px 8px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 236px;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+.tipSmallLeft[title]:hover:after {
+    content: attr(title);
+    padding: 4px 8px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 236px;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+.cartProducts{
+    width: 80%;
+    height: auto;
+    margin: 10px auto;
+    background-color: #E4F1F9;
+    padding: 10px;
+}
+
+.singleCartProduct{
+    position: relative;
+    width: 95%;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.cartProductImage{
+    position: relative;
+    float: left;
+    width: 90px;
+    height: 90px;
+    margin-left: 10px;
+}
+
+.cartProductTitleDiv{
+    float: left;
+    width: 300px;
+    margin-left: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.cartProductTitle{
+    color: #3394B5;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.cartProductQuantityDiv{
+    position: relative;
+    float: left;
+    width: 130px;
+    height: 100%;
+    margin-left: 5px;
+}
+
+.centeredCartQuantity{
+    width: 70px;
+    height: 50px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cartPQ{
+    float:left;
+    margin-right: 6px;
+    line-height: 50px;
+    width: 30px;
+    text-align: right;
+}
+
+.cartProductPrice{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.quantityUpAndDown{
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+
+.quantityUpAndDown:hover{
+    background-color: #E4F1F9;
+}
+
+.cartProductDelete{
+    color: #3394B5;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cartUserDetailsDiv{
+    width: 80%;
+    height: auto;
+    margin: 10px auto;
+    background-color: #efefef;
+    padding: 10px;
+}
+
+.cartUserDetailsSingleDiv{
+    float: left;
+    width: 370px;
+    color: #3394B5;
+    font-size: 13px;
+    height: 50px;
+    background-color: #fff;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.cartUserInput{
+    border-radius: 5px;
+    background-color: #E4F1F9;
+    border: 1px solid #3394B5;
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+}
+
+.cartFinalize{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #3394B5;
+    padding-top: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cartFinalize:hover{
+    background-color: #FFCC00;
+    color: #000;
+}
+
+.cartTableDetails{
+    border-collapse: collapse;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.cartTableDetails td{
+    border: 1px solid #3394B5;
+    padding: 3px;
+}
+
+.indexGallery{
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #000;
+    padding: 20px;
+    border-bottom: 25px solid transparent;
+    -webkit-border-image: url(../images/slideshowBottom.png) 300 300 repeat; /* Safari 3.1-5 */
+    -o-border-image: url(../images/slideshowBottom.png) 300 300 repeat; /* Opera 11-12.1 */
+    border-image: url(../images/slideshowBottom.png) 300 300 repeat;
+}
+
+.indexGalleryTopBorder{
+    margin-left: 0;
+    margin-right: 0;
+    height: 0px;
+    padding: 20px;
+    border-bottom: 25px solid transparent;
+    -webkit-border-image: url(../images/borderTop.png) 300 300 repeat; /* Safari 3.1-5 */
+    -o-border-image: url(../images/borderTop.png) 300 300 repeat; /* Opera 11-12.1 */
+    border-image: url(../images/borderTop.png) 300 300 repeat;
+}
+
+.videoTitle{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+
+.videoDescription{
+    width: 400px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: justify;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 30px;
+    float: left;
+    font-family: 'Georgia';
+}
+
+.videoThumbnailFrame{
+    width: 252px;
+    height: 142px;
+    z-index: 0;
+}
+
+.videoThumbnailOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(256, 256, 256, 0.2);
+}
+
+.videoThumbnailOverlay:hover{
+    background-color: rgba(256, 256, 256, 0);
+}
+
+.youtibeVideoDiv{
+    width: 500px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border: 2px solid #3394B5;
+    float: left;
+}
+
+.youtubeVideoFrame{
+    width: 500px;
+    height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

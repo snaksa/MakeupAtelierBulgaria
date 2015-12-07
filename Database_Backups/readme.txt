@@ -1,0 +1,1 @@
+Remember to change the credentials in all files (.env and the db config)
